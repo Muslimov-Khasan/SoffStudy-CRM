@@ -1,0 +1,88 @@
+.all__btn button {
+  width: 180px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.change__btn {
+  margin: 0;
+  padding: 0px 8px;
+  border-radius: 15px;
+  background-color: rgba(92, 102, 150, 0.512);
+  color: white;
+}
+
+#selection {
+  border: none;
+  outline: none;
+}
+
+.p__relative {
+  position: relative;
+}
+.p__absolute {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+}
+.section__page {
+  height: 90vh;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+.app {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.wrapper__pagination {
+  transform: translateY(300px);
+  margin-left: 700px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+button.active {
+  color: #fff;
+  background-color: #177EFF;
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
