@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AddPost from "./components/AddPost";
 import Home from "./components/Home";
+import swal from "sweetalert";
 import "./App.scss";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
     if (title && time && status) {
       data.push({ title, time, status });
       setLocalStorage();
+      swal("Successfully!", "Post add", "success");
       setTitle("");
       setTime("");
       setStatus("");
