@@ -3,7 +3,6 @@ import Logo from "../assets/img/logo.svg";
 import Search from "../assets/img/search.png";
 import Swatch from "../assets/img/color-swatch.png";
 import { Link } from "react-router-dom";
-import Pagination from "./Pagination";
 
 const Home = ({ data, changeStatus, setId, searchHandle, selectHandle, selectStatus, draft, publ }) => {
   return (
@@ -115,8 +114,6 @@ const Home = ({ data, changeStatus, setId, searchHandle, selectHandle, selectSta
                   ))}
                 </tbody>
               </table>
-              <Pagination/>
-
             </div>
           </div>
         </div>
