@@ -15,6 +15,18 @@ const Home = ({
   draft,
   publ,
 }) => {
+  const itemsPerPage = 3;
+  const pageCount = Math.ceil(data.length / itemsPerPage);
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value);
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentData = data.slice(startIndex, endIndex);
+
   return (
     <>
       <header>
@@ -110,7 +122,7 @@ const Home = ({
                     </tr>
                   </thead>
                   <tbody>
-                    {data.reverse().map((item, index) => (
+                    {currentData.reverse().map((item, index) => (
                       <tr key={index} onClick={() => setId(index)}>
                         <th scope="row">{index + 1}</th>
                         <td>{item.title}</td>
@@ -129,8 +141,13 @@ const Home = ({
                     ))}
                   </tbody>
                 </table>
-                {data.length > 0 && (
-                  <Pagination count={data.length} color="primary" />
+                {data.length > itemsPerPage && (
+                  <Pagination
+                    count={pageCount}
+                    color="primary"
+                    onChange={handlePageChange}
+                    page={currentPage}
+                  />
                 )}
               </div>
             </div>
